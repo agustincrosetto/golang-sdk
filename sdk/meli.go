@@ -46,7 +46,7 @@ import (
 )
 
 const (
-	AuthURLMLA = "https://auth.mercadolibre.com.ar" // Argentina
+	/*AuthURLMLA = "https://auth.mercadolibre.com.ar" // Argentina
 	AuthURLMLB = "https://auth.mercadolivre.com.br" // Brasil
 	AuthURLMco = "https://auth.mercadolibre.com.co" // Colombia
 	AuthURLMcr = "https://auth.mercadolibre.com.cr" // Costa Rica
@@ -58,7 +58,7 @@ const (
 	AuthURLMpa = "https://auth.mercadolibre.com.pa" // Panama
 	AuthURLMpe = "https://auth.mercadolibre.com.pe" // Peru
 	AuthURLMpt = "https://auth.mercadolivre.pt"     // Portugal
-	AuthURLMrd = "https://auth.mercadolibre.com.do" // Dominicana
+	AuthURLMrd = "https://auth.mercadolibre.com.do" // Dominicana*/
 
 	AuthoricationCode = "authorization_code"
 	APIURL            = "https://api.mercadolibre.com"
@@ -76,6 +76,22 @@ var debugEnable = false //Set this true if you want to see debug messages
 func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	clientByUser = make(map[string]*Client)
+}
+
+type sites []site
+
+func (s sites) Get(siteId string) *site {
+	for _, site := range s {
+		if site.Id == siteId {
+			return &site
+		}
+	}
+	return nil
+}
+
+type site struct {
+	Id  string `json:"id"`
+	Url string `json:"url"`
 }
 
 /*GetAuthURL function returns the URL for the user to authenticate and authorize*/
@@ -111,7 +127,6 @@ If userCode has a value, then a full authenticated client will be returned. This
 mercadolibre API.
 */
 func Meli(clientID int64, userCode string, secret string, callBackURL string) (*Client, error) {
-
 	config := MeliConfig{
 		ClientID:       clientID,
 		UserCode:       userCode,
@@ -120,7 +135,6 @@ func Meli(clientID int64, userCode string, secret string, callBackURL string) (*
 		HTTPClient:     MeliHTTPClient{},
 		TokenRefresher: MeliTokenRefresher{},
 	}
-
 	return MeliClient(config)
 }
 
@@ -161,6 +175,10 @@ func MeliClient(config MeliConfig) (*Client, error) {
 
 		if debugEnable {
 			log.Printf("Building a client: %p for clientid:%d code:%s\n", client, config.ClientID, config.UserCode)
+		}
+
+		if err := client.fillSites(); err != nil {
+			return nil, err
 		}
 
 		auth, err := client.authorize()
@@ -257,6 +275,7 @@ type Client struct {
 	auth           Authorization
 	httpClient     HTTPClient
 	tokenRefresher TokenRefresher
+	sites          sites
 }
 
 /*
@@ -298,6 +317,25 @@ func (client *Client) authorize() (*Authorization, error) {
 
 	authorization.ReceivedAt = time.Now().Unix()
 	return authorization, nil
+}
+
+func (client *Client) fillSites() error {
+	response, err := client.httpClient.Get(client.apiURL + "/authsites")
+	if err != nil {
+		return errors.New("invalid restclient response")
+	}
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		return errors.New("error reading sites response")
+	}
+	if err := json.Unmarshal(body, &client.sites); err != nil {
+		return errors.New("error parsing sites response")
+	}
+	return nil
+}
+
+func (client *Client) GetSites() sites {
+	return client.sites
 }
 
 func (client *Client) refreshToken() error {

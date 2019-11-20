@@ -32,7 +32,7 @@ import (
 const (
 	clientID     = 2016679662291617
 	clientSecret = "bA89yqE9lPeXwcZkOLBTdKGDXYFbApuZ"
-	host         = "http://localhost:8080"
+	host         = "http://localhost:8081"
 )
 
 var userCode map[string]string
@@ -45,7 +45,7 @@ func main() {
 	userCode = make(map[string]string)
 	//	userForbidden = make(map[string]string)
 
-	log.Fatal(http.ListenAndServe(":8080", getRouter()))
+	log.Fatal(http.ListenAndServe(":8085", getRouter()))
 }
 
 type item struct {
@@ -139,7 +139,7 @@ func getItem(w http.ResponseWriter, r *http.Request) {
 
 	var response *http.Response
 	if response, err = client.Get(resource); err != nil {
-		log.Printf("Error: ", err.Error())
+		log.Printf("Error: %s", err.Error())
 		return
 	}
 
@@ -163,7 +163,7 @@ func postItem(w http.ResponseWriter, r *http.Request) {
 	response, err := client.Post("/items/", item)
 
 	if err != nil {
-		log.Printf("Error: ", err)
+		log.Printf("Error: %s", err)
 		return
 	}
 	printOutput(w, response)
@@ -181,7 +181,7 @@ func getSites(w http.ResponseWriter, r *http.Request) {
 
 	var response *http.Response
 	if response, err = client.Get(resource); err != nil {
-		log.Printf("Error: ", err.Error())
+		log.Printf("Error: %s", err.Error())
 		return
 	}
 
@@ -200,7 +200,7 @@ func me(w http.ResponseWriter, r *http.Request) {
 	client, err := sdk.Meli(clientID, code, clientSecret, redirectURL)
 
 	if err != nil {
-		log.Printf("Error: ", err.Error())
+		log.Printf("Error: %s", err.Error())
 		return
 	}
 
@@ -212,13 +212,15 @@ func me(w http.ResponseWriter, r *http.Request) {
 
 	var response *http.Response
 	if response, err = client.Get("/users/me"); err != nil {
-		log.Printf("Error: ", err.Error())
+		log.Printf("Error: %s", err.Error())
 		return
 	}
 
+	siteId := "MLA"
+	siteMla := client.GetSites().Get(siteId)
 	if response.StatusCode == http.StatusForbidden {
 
-		url := sdk.GetAuthURL(clientID, sdk.AuthURLMLA, host+"/"+user+"/users/me")
+		url := sdk.GetAuthURL(clientID, siteMla.Url, host+"/"+user+"/users/me")
 		log.Printf("Returning Authentication URL:%s\n", url)
 
 		//		userForbidden[user] = ""
@@ -247,13 +249,13 @@ func addresses(w http.ResponseWriter, r *http.Request) {
 	client, err := sdk.Meli(clientID, code, clientSecret, redirectURL)
 
 	if err != nil {
-		log.Printf("Error: ", err.Error())
+		log.Printf("Error: %s", err.Error())
 		return
 	}
 
 	var response *http.Response
 	if response, err = client.Get(resource); err != nil {
-		log.Printf("Error: ", err.Error())
+		log.Printf("Error: %s", err.Error())
 		return
 	}
 
@@ -262,8 +264,15 @@ func addresses(w http.ResponseWriter, r *http.Request) {
 	  Once you generate the URL and call it, you will be redirected to a ML login page where your credentials will be asked. Then, after
 	  entering your credentials you will obtain a CODE which will be used to get all the authorization tokens.
 	*/
+	siteId := "MLA"
+	siteMla := client.GetSites().Get(siteId)
+	if siteMla == nil {
+		log.Printf("site id %s not found in meli sites", siteId)
+		return
+	}
+
 	if response.StatusCode == http.StatusForbidden {
-		url := sdk.GetAuthURL(clientID, sdk.AuthURLMLA, redirectURL)
+		url := sdk.GetAuthURL(clientID, siteMla.Url, redirectURL)
 		body, _ := ioutil.ReadAll(response.Body)
 		log.Printf("Returning Authentication URL:%s\n", url)
 		log.Printf("Error:%s", body)

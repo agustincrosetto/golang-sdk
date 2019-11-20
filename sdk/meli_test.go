@@ -20,11 +20,13 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"github.com/mercadolibre/go-meli-toolkit/restful/rest"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 	"sync"
 	"testing"
@@ -37,19 +39,9 @@ const (
 	USER_CODE     = "valid code with refresh token"
 )
 
-func Test_URL_for_authentication_is_properly_returned(t *testing.T) {
-
-	expectedUrl := "https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=123456&redirect_uri=http%3A%2F%2Fsomeurl.com"
-
-	url := GetAuthURL(CLIENT_ID, AuthURLMLA, "http://someurl.com")
-
-	if url != expectedUrl {
-		log.Printf("Error: The URL is different from the one that was expected.")
-		log.Printf("expected %s", expectedUrl)
-		log.Printf("obtained %s", url)
-		t.FailNow()
-	}
-
+func TestMain(m *testing.M) {
+	rest.StartMockupServer()
+	os.Exit(m.Run())
 }
 
 func Test_Generic_Client_Is_Returned_When_No_UserCODE_is_given(t *testing.T) {
@@ -58,6 +50,21 @@ func Test_Generic_Client_Is_Returned_When_No_UserCODE_is_given(t *testing.T) {
 
 	if client.auth != anonymous {
 		log.Printf("Error: Client is not ANONYMOUS")
+		t.FailNow()
+	}
+
+}
+
+func Test_URL_for_authentication_is_properly_returned(t *testing.T) {
+
+	expectedUrl := "https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=123456&redirect_uri=http%3A%2F%2Fsomeurl.com"
+
+	url := GetAuthURL(CLIENT_ID, "https://auth.mercadolibre.com.ar", "http://someurl.com")
+
+	if url != expectedUrl {
+		log.Printf("Error: The URL is different from the one that was expected.")
+		log.Printf("expected %s", expectedUrl)
+		log.Printf("obtained %s", url)
 		t.FailNow()
 	}
 
@@ -85,7 +92,6 @@ func Test_FullAuthenticated_Client_Is_Returned_When_UserCODE_And_ClientId_is_giv
 }
 
 func Test_That_An_Error_Is_Returned_When_Authentication_Fails(t *testing.T) {
-
 	config := MeliConfig{
 
 		ClientID:       CLIENT_ID,
@@ -449,7 +455,6 @@ type MockHttpClient struct {
 }
 
 func (httpClient MockHttpClient) Get(url string) (*http.Response, error) {
-
 	resp := new(http.Response)
 
 	if strings.Contains(url, "/sites") {
@@ -459,6 +464,11 @@ func (httpClient MockHttpClient) Get(url string) (*http.Response, error) {
 
 	if strings.Contains(url, "/users/me") {
 		resp.Body = ioutil.NopCloser(bytes.NewReader([]byte("")))
+		resp.StatusCode = http.StatusOK
+	}
+
+	if strings.Contains(url, "/authsites") {
+		resp.Body = ioutil.NopCloser(bytes.NewReader([]byte(`[{"id":"MLA","name":"Argentina","url":"https://auth.mercadolibre.com.ar"},{"id":"MLB","name":"Brasil","url":"https://auth.mercadolivre.com.br"},{"id":"MCO","name":"Colombia","url":"https://auth.mercadolibre.com.co"},{"id":"MCR","name":"Costa Rica","url":"https://auth.mercadolibre.com.cr"},{"id":"MEC","name":"Ecuador","url":"https://auth.mercadolibre.com.ec"},{"id":"MLC","name":"Chile","url":"https://auth.mercadolibre.cl"},{"id":"MLM","name":"Mexico","url":"https://auth.mercadolibre.com.mx"},{"id":"MLU","name":"Uruguay","url":"https://auth.mercadolibre.com.uy"},{"id":"MLV","name":"Venezuela","url":"https://auth.mercadolibre.com.ve"},{"id":"MPA","name":"Panamá","url":"https://auth.mercadolibre.com.pa"},{"id":"MPE","name":"Perú","url":"https://auth.mercadolibre.com.pe"},{"id":"MPT","name":"Portugal","url":"https://auth.mercadolivre.pt"},{"id":"MRD","name":"Dominicana","url":"https://auth.mercadolibre.com.do"},{"id":"CBT","name":"","url":""}]`)))
 		resp.StatusCode = http.StatusOK
 	}
 
@@ -594,6 +604,13 @@ func (httpClient MockHttpClientPostFailure) Post(uri string, bodyType string, bo
 	return nil, errors.New("Error")
 }
 func (httpClient MockHttpClientPostFailure) Get(url string) (*http.Response, error) {
+	switch url {
+	case "https://api.mercadolibre.com/authsites":
+		return &http.Response{
+			StatusCode: http.StatusOK,
+			Body:       ioutil.NopCloser(strings.NewReader(`[{"id":"MLA","name":"Argentina","url":"https://auth.mercadolibre.com.ar"},{"id":"MLB","name":"Brasil","url":"https://auth.mercadolivre.com.br"},{"id":"MCO","name":"Colombia","url":"https://auth.mercadolibre.com.co"},{"id":"MCR","name":"Costa Rica","url":"https://auth.mercadolibre.com.cr"},{"id":"MEC","name":"Ecuador","url":"https://auth.mercadolibre.com.ec"},{"id":"MLC","name":"Chile","url":"https://auth.mercadolibre.cl"},{"id":"MLM","name":"Mexico","url":"https://auth.mercadolibre.com.mx"},{"id":"MLU","name":"Uruguay","url":"https://auth.mercadolibre.com.uy"},{"id":"MLV","name":"Venezuela","url":"https://auth.mercadolibre.com.ve"},{"id":"MPA","name":"Panamá","url":"https://auth.mercadolibre.com.pa"},{"id":"MPE","name":"Perú","url":"https://auth.mercadolibre.com.pe"},{"id":"MPT","name":"Portugal","url":"https://auth.mercadolivre.pt"},{"id":"MRD","name":"Dominicana","url":"https://auth.mercadolibre.com.do"},{"id":"CBT","name":"","url":""}]`)),
+		}, nil
+	}
 	return nil, nil
 }
 

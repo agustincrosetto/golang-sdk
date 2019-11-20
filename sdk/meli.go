@@ -46,20 +46,6 @@ import (
 )
 
 const (
-	/*AuthURLMLA = "https://auth.mercadolibre.com.ar" // Argentina
-	AuthURLMLB = "https://auth.mercadolivre.com.br" // Brasil
-	AuthURLMco = "https://auth.mercadolibre.com.co" // Colombia
-	AuthURLMcr = "https://auth.mercadolibre.com.cr" // Costa Rica
-	AuthURLMec = "https://auth.mercadolibre.com.ec" // Ecuador
-	AuthURLMlc = "https://auth.mercadolibre.cl"     // Chile
-	AuthURLMLM = "https://auth.mercadolibre.com.mx" // Mexico
-	AuthURLMlu = "https://auth.mercadolibre.com.uy" // Uruguay
-	AuthURLMlv = "https://auth.mercadolibre.com.ve" // Venezuela
-	AuthURLMpa = "https://auth.mercadolibre.com.pa" // Panama
-	AuthURLMpe = "https://auth.mercadolibre.com.pe" // Peru
-	AuthURLMpt = "https://auth.mercadolivre.pt"     // Portugal
-	AuthURLMrd = "https://auth.mercadolibre.com.do" // Dominicana*/
-
 	AuthoricationCode = "authorization_code"
 	APIURL            = "https://api.mercadolibre.com"
 	RefreshToken      = "refresh_token"

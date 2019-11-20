@@ -4,7 +4,6 @@
     <list default="true" id="0d46f875-dfa5-4010-ba52-7f9d35c12caa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sdk/meli.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/meli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdk/meli_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/meli_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sdk/meli.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="486" selection-start-line="486" selection-end-line="486" />
+            <state relative-caret-position="137">
+              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding>
                 <element signature="e#1074#1214#0" expanded="true" />
               </folding>
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2013">
-              <caret line="257" column="29" selection-start-line="257" selection-start-column="29" selection-end-line="257" selection-end-column="29" />
+            <state relative-caret-position="-4058">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
               <folding>
                 <element signature="e#578#732#0" expanded="true" />
               </folding>
@@ -102,9 +101,9 @@
         <option value="$PROJECT_DIR$/sdk/service/site/site_service.go" />
         <option value="$PROJECT_DIR$/sdk/controller/site/site_controller.go" />
         <option value="/usr/local/Cellar/go/1.12.6/libexec/src/net/http/client.go" />
-        <option value="$PROJECT_DIR$/sdk/meli.go" />
         <option value="$PROJECT_DIR$/sdk/meli_test.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/sdk/meli.go" />
       </list>
     </option>
   </component>
@@ -157,6 +156,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -295,8 +295,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="294" y="-1080" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15761448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15761448" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -309,7 +310,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.42755824" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31408307" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31408307" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -484,16 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdk/meli.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="486" selection-start-line="486" selection-end-line="486" />
-          <folding>
-            <element signature="e#1074#1214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/go/1.12.6/libexec/src/net/http/response.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -535,10 +526,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2013">
-          <caret line="257" column="29" selection-start-line="257" selection-start-column="29" selection-end-line="257" selection-end-column="29" />
+        <state relative-caret-position="-4058">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding>
             <element signature="e#578#732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdk/meli.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <element signature="e#1074#1214#0" expanded="true" />
           </folding>
         </state>
       </provider>

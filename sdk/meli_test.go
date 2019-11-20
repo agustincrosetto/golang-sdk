@@ -46,7 +46,7 @@ func TestMain(m *testing.M) {
 
 func Test_Generic_Client_Is_Returned_When_No_UserCODE_is_given(t *testing.T) {
 
-	client, _ := Meli(CLIENT_ID, "", CLIENT_SECRET, "htt://www.example.com")
+	client, _ := Meli(CLIENT_ID, "", CLIENT_SECRET, "http://www.example.com")
 
 	if client.auth != anonymous {
 		log.Printf("Error: Client is not ANONYMOUS")

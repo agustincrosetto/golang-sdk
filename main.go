@@ -32,7 +32,7 @@ import (
 const (
 	clientID     = 2016679662291617
 	clientSecret = "bA89yqE9lPeXwcZkOLBTdKGDXYFbApuZ"
-	host         = "http://localhost:8081"
+	host         = "http://localhost:8080"
 )
 
 var userCode map[string]string
@@ -45,7 +45,7 @@ func main() {
 	userCode = make(map[string]string)
 	//	userForbidden = make(map[string]string)
 
-	log.Fatal(http.ListenAndServe(":8085", getRouter()))
+	log.Fatal(http.ListenAndServe(":8080", getRouter()))
 }
 
 type item struct {

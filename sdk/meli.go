@@ -306,7 +306,7 @@ func (client *Client) authorize() (*Authorization, error) {
 }
 
 func (client *Client) fillSites() error {
-	response, err := client.httpClient.Get(client.apiURL + "/authsites")
+	response, err := client.httpClient.Get(client.apiURL + "/auth_url_list")
 	if err != nil {
 		return errors.New("invalid restclient response")
 	}

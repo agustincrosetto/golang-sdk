@@ -467,7 +467,7 @@ func (httpClient MockHttpClient) Get(url string) (*http.Response, error) {
 		resp.StatusCode = http.StatusOK
 	}
 
-	if strings.Contains(url, "/authsites") {
+	if strings.Contains(url, "/auth_url_list") {
 		resp.Body = ioutil.NopCloser(bytes.NewReader([]byte(`[{"id":"MLA","name":"Argentina","url":"https://auth.mercadolibre.com.ar"},{"id":"MLB","name":"Brasil","url":"https://auth.mercadolivre.com.br"},{"id":"MCO","name":"Colombia","url":"https://auth.mercadolibre.com.co"},{"id":"MCR","name":"Costa Rica","url":"https://auth.mercadolibre.com.cr"},{"id":"MEC","name":"Ecuador","url":"https://auth.mercadolibre.com.ec"},{"id":"MLC","name":"Chile","url":"https://auth.mercadolibre.cl"},{"id":"MLM","name":"Mexico","url":"https://auth.mercadolibre.com.mx"},{"id":"MLU","name":"Uruguay","url":"https://auth.mercadolibre.com.uy"},{"id":"MLV","name":"Venezuela","url":"https://auth.mercadolibre.com.ve"},{"id":"MPA","name":"Panamá","url":"https://auth.mercadolibre.com.pa"},{"id":"MPE","name":"Perú","url":"https://auth.mercadolibre.com.pe"},{"id":"MPT","name":"Portugal","url":"https://auth.mercadolivre.pt"},{"id":"MRD","name":"Dominicana","url":"https://auth.mercadolibre.com.do"},{"id":"CBT","name":"","url":""}]`)))
 		resp.StatusCode = http.StatusOK
 	}
@@ -605,7 +605,7 @@ func (httpClient MockHttpClientPostFailure) Post(uri string, bodyType string, bo
 }
 func (httpClient MockHttpClientPostFailure) Get(url string) (*http.Response, error) {
 	switch url {
-	case "https://api.mercadolibre.com/authsites":
+	case "https://api.mercadolibre.com/auth_url_list":
 		return &http.Response{
 			StatusCode: http.StatusOK,
 			Body:       ioutil.NopCloser(strings.NewReader(`[{"id":"MLA","name":"Argentina","url":"https://auth.mercadolibre.com.ar"},{"id":"MLB","name":"Brasil","url":"https://auth.mercadolivre.com.br"},{"id":"MCO","name":"Colombia","url":"https://auth.mercadolibre.com.co"},{"id":"MCR","name":"Costa Rica","url":"https://auth.mercadolibre.com.cr"},{"id":"MEC","name":"Ecuador","url":"https://auth.mercadolibre.com.ec"},{"id":"MLC","name":"Chile","url":"https://auth.mercadolibre.cl"},{"id":"MLM","name":"Mexico","url":"https://auth.mercadolibre.com.mx"},{"id":"MLU","name":"Uruguay","url":"https://auth.mercadolibre.com.uy"},{"id":"MLV","name":"Venezuela","url":"https://auth.mercadolibre.com.ve"},{"id":"MPA","name":"Panamá","url":"https://auth.mercadolibre.com.pa"},{"id":"MPE","name":"Perú","url":"https://auth.mercadolibre.com.pe"},{"id":"MPT","name":"Portugal","url":"https://auth.mercadolivre.pt"},{"id":"MRD","name":"Dominicana","url":"https://auth.mercadolibre.com.do"},{"id":"CBT","name":"","url":""}]`)),

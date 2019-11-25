@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d46f875-dfa5-4010-ba52-7f9d35c12caa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sdk/meli.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/meli.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdk/meli_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/meli_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +19,12 @@
     <option name="myElementSize" value="512" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdk/meli.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="180">
+              <caret line="308" selection-start-line="308" selection-end-line="308" />
               <folding>
                 <element signature="e#1074#1214#0" expanded="true" />
               </folding>
@@ -32,22 +33,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdk/meli_test.go">
+        <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9360">
-              <caret line="638" column="19" selection-start-line="638" selection-start-column="19" selection-end-line="638" selection-end-column="19" />
+            <state relative-caret-position="-2204">
+              <caret line="34" column="21" selection-start-line="34" selection-end-line="35" />
+              <folding>
+                <element signature="e#578#732#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sdk/meli_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4058">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-              <folding>
-                <element signature="e#578#732#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="166">
+              <caret line="385" column="5" selection-start-line="385" selection-start-column="5" selection-end-line="385" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -101,9 +102,9 @@
         <option value="$PROJECT_DIR$/sdk/service/site/site_service.go" />
         <option value="$PROJECT_DIR$/sdk/controller/site/site_controller.go" />
         <option value="/usr/local/Cellar/go/1.12.6/libexec/src/net/http/client.go" />
-        <option value="$PROJECT_DIR$/sdk/meli_test.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/sdk/meli.go" />
+        <option value="$PROJECT_DIR$/sdk/meli_test.go" />
       </list>
     </option>
   </component>
@@ -117,7 +118,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="294" />
     <option name="y" value="-1080" />
     <option name="width" value="1920" />
@@ -189,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.go test golang-sdk">
+  <component name="RunManager" selected="Go Test.Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk">
     <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golang-sdk" />
       <working_directory value="$PROJECT_DIR$/sdk" />
@@ -201,7 +202,7 @@
       <pattern value="^Test_That_An_Error_Is_Returned_When_Authentication_Fails$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_That_MeliTokenRefresher_Returns_An_Error_When_Posting_Authorization_Fails in github.com/mercadolibre/golang-sdk/sdk" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golang-sdk" />
       <working_directory value="$PROJECT_DIR$/sdk" />
       <framework value="gotest" />
@@ -209,7 +210,7 @@
       <package value="github.com/mercadolibre/golang-sdk/sdk" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_That_MeliTokenRefresher_Returns_An_Error_When_Posting_Authorization_Fails$" />
+      <pattern value="^Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed$" />
       <method v="2" />
     </configuration>
     <configuration name="go test github.com/mercadolibre/golang-sdk/sdk" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -244,44 +245,44 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.go test golang-sdk" />
+        <item itemvalue="Go Test.Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" />
         <item itemvalue="Go Test.meli_test.go" />
-        <item itemvalue="Go Test.Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" />
-        <item itemvalue="Go Test.Test_That_MeliTokenRefresher_Returns_An_Error_When_Posting_Authorization_Fails in github.com/mercadolibre/golang-sdk/sdk" />
+        <item itemvalue="Go Test.go test golang-sdk" />
         <item itemvalue="Go Test.go test github.com/mercadolibre/golang-sdk/sdk" />
+        <item itemvalue="Go Test.Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.19 at 10h 54m 13s.xml">
+    <history-entry file="Test_AuthorizationURL_adds_a_params_separator_when_needed_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 14h 53m 47s.xml">
+      <configuration name="Test_AuthorizationURL_adds_a_params_separator_when_needed in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_AuthorizationURL_adds_a_query_param_separator_when_needed_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 14h 53m 51s.xml">
+      <configuration name="Test_AuthorizationURL_adds_a_query_param_separator_when_needed in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 14h 53m 55s.xml">
+      <configuration name="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 14h 54m 02s.xml">
+      <configuration name="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 14h 55m 30s.xml">
+      <configuration name="go test github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_golang-sdk - 2019.11.25 at 14h 55m 48s.xml">
+      <configuration name="go test golang-sdk" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 15h 03m 04s.xml">
       <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.19 at 10h 55m 10s.xml">
-      <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.19 at 10h 55m 28s.xml">
-      <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.19 at 10h 55m 48s.xml">
-      <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.19 at 10h 56m 10s.xml">
-      <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_That_An_Error_Is_Returned_When_Authentication_Fails_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.19 at 12h 12m 44s.xml">
-      <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="meli_test_go - 2019.11.19 at 12h 12m 53s.xml">
+    <history-entry file="meli_test_go - 2019.11.25 at 15h 03m 18s.xml">
       <configuration name="meli_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_golang-sdk - 2019.11.19 at 15h 10m 42s.xml">
-      <configuration name="go test golang-sdk" configurationId="GoTestRunConfiguration" />
+    <history-entry file="meli_test_go - 2019.11.25 at 15h 04m 39s.xml">
+      <configuration name="meli_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="go_test_golang-sdk - 2019.11.19 at 15h 21m 18s.xml">
-      <configuration name="go test golang-sdk" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="go_test_golang-sdk - 2019.11.19 at 15h 21m 28s.xml">
-      <configuration name="go test golang-sdk" configurationId="GoTestRunConfiguration" />
+    <history-entry file="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed_in_github_com_mercadolibre_golang-sdk_sdk - 2019.11.25 at 15h 04m 48s.xml">
+      <configuration name="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -297,12 +298,12 @@
     <frame x="294" y="-1080" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15761448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15921193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32928064" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32928064" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32928064" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4508612" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -310,13 +311,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.42755824" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31408307" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31408307" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32960597" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.32960597" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -362,6 +363,12 @@
           <line>35</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/sdk/meli.go</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -372,6 +379,7 @@
     <SUITE FILE_PATH="coverage/golang_sdk$go_test_github_com_mercadolibre_golang_sdk_sdk.out" NAME="go test github.com/mercadolibre/golang-sdk/sdk Coverage Results" MODIFIED="1573847979522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/golang_sdk$Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed_in_github_com_mercadolibre_golang_sdk_sdk.out" NAME="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk Coverage Results" MODIFIED="1573839403066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/golang_sdk$go_test_github_com_mercadolibre_golang_sdk_sdk_providers_site.out" NAME="go test github.com/mercadolibre/golang-sdk/sdk/providers/site Coverage Results" MODIFIED="1573567556263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/golang_sdk$go_test_golang_sdk.out" NAME="go test golang-sdk Coverage Results" MODIFIED="1574257888756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/golang_sdk$TestGetSitesFromApiBadRequest_in_github_com_mercadolibre_golang_sdk_sdk_providers_site.out" NAME="TestGetSitesFromApiBadRequest in github.com/mercadolibre/golang-sdk/sdk/providers/site Coverage Results" MODIFIED="1573567012686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/golang_sdk$TestGetSitesFromApiNoError_in_github_com_mercadolibre_golang_sdk_sdk_providers_site.out" NAME="TestGetSitesFromApiNoError in github.com/mercadolibre/golang-sdk/sdk/providers/site Coverage Results" MODIFIED="1573567550173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/golang_sdk$TestGetSitesFromApiErrorJsonResponse_in_github_com_mercadolibre_golang_sdk_sdk_providers_site.out" NAME="TestGetSitesFromApiErrorJsonResponse in github.com/mercadolibre/golang-sdk/sdk/providers/site Coverage Results" MODIFIED="1573567092829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -517,17 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdk/meli_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9360">
-          <caret line="638" column="19" selection-start-line="638" selection-start-column="19" selection-end-line="638" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4058">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        <state relative-caret-position="-2204">
+          <caret line="34" column="21" selection-start-line="34" selection-end-line="35" />
           <folding>
             <element signature="e#578#732#0" expanded="true" />
           </folding>
@@ -536,11 +537,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sdk/meli.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="180">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
           <folding>
             <element signature="e#1074#1214#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdk/meli_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="385" column="5" selection-start-line="385" selection-start-column="5" selection-end-line="385" selection-end-column="5" />
         </state>
       </provider>
     </entry>

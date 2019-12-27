@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d46f875-dfa5-4010-ba52-7f9d35c12caa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdk/meli.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/meli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sdk/meli_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/sdk/meli_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdk/meli.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="308" selection-start-line="308" selection-end-line="308" />
+            <state relative-caret-position="7050">
+              <caret line="484" selection-start-line="484" selection-end-line="484" />
               <folding>
                 <element signature="e#1074#1214#0" expanded="true" />
               </folding>
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2204">
-              <caret line="34" column="21" selection-start-line="34" selection-end-line="35" />
+            <state relative-caret-position="305">
+              <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
               <folding>
                 <element signature="e#578#732#0" expanded="true" />
               </folding>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sdk/meli_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="385" column="5" selection-start-line="385" selection-start-column="5" selection-end-line="385" selection-end-column="5" />
+            <state relative-caret-position="9285">
+              <caret line="633" column="54" selection-start-line="633" selection-start-column="54" selection-end-line="633" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -81,6 +81,12 @@
       <find>/sites</find>
       <find>Error: An error should have been received.</find>
       <find>APIURL</find>
+      <find>hol</find>
+      <find>llamo a la URL posta:</find>
+      <find>llamo a la URL posta</find>
+      <find>llego posta</find>
+      <find>lleº</find>
+      <find>lleºº</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../go-meli-toolkit/restful</dir>
@@ -88,7 +94,15 @@
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.12.6/libexec" />
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/../../../.." />
+      </list>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -102,9 +116,9 @@
         <option value="$PROJECT_DIR$/sdk/service/site/site_service.go" />
         <option value="$PROJECT_DIR$/sdk/controller/site/site_controller.go" />
         <option value="/usr/local/Cellar/go/1.12.6/libexec/src/net/http/client.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/sdk/meli.go" />
         <option value="$PROJECT_DIR$/sdk/meli_test.go" />
+        <option value="$PROJECT_DIR$/sdk/meli.go" />
+        <option value="$PROJECT_DIR$/main.go" />
       </list>
     </option>
   </component>
@@ -118,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="294" />
     <option name="y" value="-1080" />
     <option name="width" value="1920" />
@@ -132,6 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,16 +167,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -172,6 +190,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -190,16 +209,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk">
-    <configuration name="Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golang-sdk" />
-      <working_directory value="$PROJECT_DIR$/sdk" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/mercadolibre/golang-sdk/sdk" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/mercadolibre/golang-sdk" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_That_An_Error_Is_Returned_When_Authentication_Fails$" />
       <method v="2" />
     </configuration>
     <configuration name="Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -245,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Test.Test_only_one_token_refresh_call_is_done_when_several_threads_are_executed in github.com/mercadolibre/golang-sdk/sdk" />
         <item itemvalue="Go Test.meli_test.go" />
         <item itemvalue="Go Test.go test golang-sdk" />
         <item itemvalue="Go Test.go test github.com/mercadolibre/golang-sdk/sdk" />
-        <item itemvalue="Go Test.Test_That_An_Error_Is_Returned_When_Authentication_Fails in github.com/mercadolibre/golang-sdk/sdk" />
       </list>
     </recent_temporary>
   </component>
@@ -296,14 +313,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="294" y="-1080" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15921193" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14643237" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32928064" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32928064" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32928064" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4508612" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -311,7 +327,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.42755824" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31408307" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2046606" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -366,7 +382,6 @@
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/sdk/meli.go</url>
           <line>134</line>
-          <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -525,20 +540,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2204">
-          <caret line="34" column="21" selection-start-line="34" selection-end-line="35" />
-          <folding>
-            <element signature="e#578#732#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sdk/meli.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        <state relative-caret-position="7050">
+          <caret line="484" selection-start-line="484" selection-end-line="484" />
           <folding>
             <element signature="e#1074#1214#0" expanded="true" />
           </folding>
@@ -547,8 +552,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sdk/meli_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="385" column="5" selection-start-line="385" selection-start-column="5" selection-end-line="385" selection-end-column="5" />
+        <state relative-caret-position="9285">
+          <caret line="633" column="54" selection-start-line="633" selection-start-column="54" selection-end-line="633" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+          <folding>
+            <element signature="e#578#732#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
